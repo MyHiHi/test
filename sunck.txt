@@ -1,2 +1,15 @@
 #include <iostream>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+sky1
+=======
+:i
+:i
+:q
+dasdsdds
+we are world 
+skye
+>>>>>>> new
+>>>>>>> master
