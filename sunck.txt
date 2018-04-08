@@ -1,7 +1,2 @@
 #include <iostream>
-:i
-:i
-:q
-dasdsdds
-we are world 
-skye
+
