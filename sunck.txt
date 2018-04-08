@@ -1,2 +1,11 @@
 #include <iostream>
+<<<<<<< HEAD
 sky1
+=======
+:i
+:i
+:q
+dasdsdds
+we are world 
+skye
+>>>>>>> new
