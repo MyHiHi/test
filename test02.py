@@ -8,3 +8,8 @@ from collections import Counter,deque,defaultdict,namedtuple
 
 # with open("test.cpp","rb") as f:
 #     print(Counter(f))
+
+animal = namedtuple("animal","age name")
+test = animal("huaer",11)
+print(test.name)
+
