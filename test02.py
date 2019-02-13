@@ -65,4 +65,4 @@ print(list1)
 
 #     # Python 3
 #     python -m http.server 8998
-# ipconfig:http://192.168.111.105(本机IP):8000/
+# ipconfig:浏览器访问:http://192.168.111.105(本机IP):8000/
