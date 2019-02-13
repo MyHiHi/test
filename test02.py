@@ -64,5 +64,5 @@ print(list1)
 #     python -m SimpleHTTPServer
 
 #     # Python 3
-#     python -m http.server
+#     python -m http.server 8998
 # ipconfig:http://192.168.111.105(本机IP):8000/
