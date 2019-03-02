@@ -1,0 +1,40 @@
+[INFO  - 2019-03-02T08:20:37.067Z] GhostDriver - Main - running on port 51348
+[INFO  - 2019-03-02T08:20:41.199Z] Session [113a70d0-3cc4-11e9-8325-b5b933f2ff89] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0","webSecurityEnabled":true}
+[INFO  - 2019-03-02T08:20:41.199Z] Session [113a70d0-3cc4-11e9-8325-b5b933f2ff89] - page.customHeaders:  - {}
+[INFO  - 2019-03-02T08:20:41.199Z] Session [113a70d0-3cc4-11e9-8325-b5b933f2ff89] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0"}
+[INFO  - 2019-03-02T08:20:41.200Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 113a70d0-3cc4-11e9-8325-b5b933f2ff89
+[ERROR - 2019-03-02T08:20:43.936Z] Session [113a70d0-3cc4-11e9-8325-b5b933f2ff89] - page.onError - msg: TypeError: undefined is not an object (evaluating '$.browser.msie')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-02T08:20:43.937Z] Session [113a70d0-3cc4-11e9-8325-b5b933f2ff89] - page.onError - stack:
+  initialize (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  l (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  n (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  initialize (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  l (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  n (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  initialize (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  l (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  n (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  (anonymous function) (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  dispatch (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  u (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  trigger (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  triggerHandler (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  trigger (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  switchTo (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  (anonymous function) (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  dispatch (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  u (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  trigger (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  (anonymous function) (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  each (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  each (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  trigger (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  success (http://q.qunarzz.com/hotel_fekit/prd/scripts/detail_lbs@d4999943832114a59a13.js:1)
+  l (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  fireWith (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  T (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+  onreadystatechange (http://q.qunarzz.com/hotel_fekit/prd/scripts/base@6d172b23239a1c404256.js:1)
+
+  phantomjs://platform/console++.js:263 in error

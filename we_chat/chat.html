@@ -1,0 +1,123 @@
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+   <link href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <style>
+        #chat {
+            border: 1px solid grey;
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            text-align: center;
+            clear: both;
+        }
+
+        #xiao_hong {
+            float: left;
+
+            width: 50%;
+        }
+
+        #xiao_ming {
+            float: right;
+            width: 50%;
+        }
+        .hong_info .ming_info {
+        position: relative;
+        width: 150px;
+        min-height: 50px;
+        background: #25a23b;
+        border-radius: 5px;
+        line-height: 50px;
+        margin-left: 10px;
+        word-break: break-word;
+        color: white;
+        padding: 5px;
+        line-height: 18px;
+    }
+    .hong_info .ming_info::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-right-color: #25a23b;
+            top: 15px;
+            left: -14px;
+        }
+        .hong_info .ming_info{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat">
+        <div id="xiao_hong">
+
+        </div>
+
+        <div id="xiao_ming">
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+<script>
+    var sayContent = "在哪里";
+    $(function () {
+        send_info(sayContent)
+        var name = ["xiao_hong", "xiao_ming"]
+        var info = ["hong_info", "ming_info"]
+        var flag = 0
+        for (var i = 0; i < 10; i++) {
+            if (flag == 1) {
+                flag = 0;
+            }
+            send_info(sayContent, flag, flag);
+            flag += 1;
+            
+            send_info(sayContent, flag, flag);
+        }
+        function send_info(sayContent, name_id, info_class) {
+            $.ajax({
+                type: "post",
+                url: "http://www.tuling123.com/openapi/api",
+                data: get_data(sayContent),
+                dataType: "json",
+                success: function (response) {
+                    sayContent = response.text
+                    name_string = name[name_id]
+                    info_string = info[info_class]
+                    $("#" + name_string).append("<h4>" + name_string + "</h4><p class=" + info_string + ">" + sayContent + "</p>");
+                   
+                },
+                error: function (r, y) {
+                    console.log(y)
+                }
+            });
+        }
+
+        function get_data(text) {
+            return {
+                "key": "d382e1d7de994876a11500ac8c872761",
+                "info": text
+            }
+        }
+
+
+
+    })
+
+</script>
+
+</html>
