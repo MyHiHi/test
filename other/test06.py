@@ -26,13 +26,15 @@ dcap["phantomjs.page.settings.userAgent"] = "Mozilla/5.0 (Windows NT 6.1) AppleW
 # dcap["phantomjs.page.settings.loadImages"] = False
 path="D:\software\python3.7\phantomjs-2.1.1-windows\\bin\phantomjs"
 from time import sleep
-
+url="http://hotel.qunar.com/city/baoding/dt-5117/?tag=baoding#fromDate=2019-03-04&toDate=2019-03-05&q=%E4%BF%9D%E5%AE%9A%E9%9D%92%E5%B9%B4%E5%85%AC%E5%AF%93&from=hotellist&fromFocusList=0&filterid=9ba67236-345a-41a7-9ba8-578ad3e53a20_A&showMap=0&qptype=hotelName&QHFP=ZSS_A4D9D23A"
+url="http://hotel.elong.com/10101940/"
+url="http://hotels.ctrip.com/hotel/beijing1#ctm_ref=hod_hp_sb_lst"
 driver = webdriver.PhantomJS(desired_capabilities = dcap)
 driver.get(url)
 js = "var q=document.documentElement.scrollTop=10000"
 driver.execute_script(js)
 # sleep(9)
-driver.switch_to.frame("qunarIframe")
+# driver.switch_to.frame("qunarIframe")
 # driver.implicitly_wait(2)
 print(driver.page_source)
 # with open("1.txt","wb") as f:

@@ -12,6 +12,6 @@ from selenium import webdriver
 # headers={'Accept': 'text/html,application/xhtml+xm…ml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2', 'Connection': 'keep-alive', 'Cookie': 'lastCity=101010100; toUrl=http…48303.6.2.5.6; __c=1550548303', 'DNT': '1', 'Host': 'static.zhipin.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/65.0'}
 # headers={}
 ssl._create_default_https_context = ssl._create_unverified_context
-url="http://hotel.elong.com/70101707/"
+url="http://hotel.elong.com/10101940/"
 c = requests.get(url=url).content.decode('utf-8')
 print(c)

@@ -1,18 +1,45 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-    <script src="test04.js"></script>
-<style>
-.active{
-    background-color: yellowgreen;
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="resources/img/logo-color.png" type="image/x-icon">
+    <title>测试</title>
+    <style>
+    .tooltip {
+       position: relative;
+       color: #666;
+       font-size: 14px;
+       padding: 6px 12px;
+       display: inline-block;
+       text-align: center;
+       border-radius: 5px;
+       vertical-align: top;
+       background-color: #6c6;
+ }
+.tooltip:after {
+       content: "";
+        position: absolute;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0px;
+        height: 0px;
+        border-top: 7px solid transparent;
+        border-right: 7px solid;
+        border-bottom: 7px solid transparent;
+        border-right-color: #000;
 }
 
-</style>
-</head>
-<!-- <div id="background" style="background-color:green;width: 100px;height: 100px;">
 
-</div> -->
-<input style="width: 200px" id="insert">
+    </style>
+  </head>
+  <body>
 
+      rrr
+      <div class="tooltip">这是一个提示框
+          <br>
+          asdsadasascsd
+      </div>
+    
+  </body>
 </html>

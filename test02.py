@@ -6,6 +6,8 @@ from functools import reduce
 import os
 from collections import Counter, deque, defaultdict, namedtuple
 
+# p={"s":1,"d":3}
+# print(p.)
 # print(os.path.isfile("test.cpp"))
 
 # with open("test.cpp","rb") as f:
@@ -100,9 +102,53 @@ data = zip(list1, list2)
 # with open_file("test04.js") as f:
 #     f.write("hello world\n")
 
-a=[]
-for i in range(100):
-    import random
-    a.append(random.randint(1,20))
-print(a,"\n",set(a))
+# a=[]
+# for i in range(100):
+#     import random
+#     a.append(random.randint(1,20))
+# print(a,"\n",set(a))
 
+# def get_runtime(func):
+#     def wrapper(*args,**kwargs):
+#         import time
+#         start=time.process_time()
+#         func(*args,**kwargs);
+#         print(float(time.process_time()-start))
+#     return wrapper
+
+# @get_runtime
+# def func(name):
+#     print(name+" is runed")
+
+# func("pyyy")
+def threeSum( nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if not nums:
+            return None;
+        p=[]
+        leg=len(nums)
+        for i in range(leg):
+            for j in range(i+1,leg):
+                num1,num2,num3=nums[i],nums[j],0-nums[i]-nums[j]
+                if num3 in nums[j+1:]:
+                    t=True
+                    if p:
+                        for c in p:
+                            if num1 in c and num2 in c and num3 in c:
+                                t=False
+                                break;
+                    if t:
+                        p.append([num1,num2,num3])
+        return p;
+
+
+# po=threeSum([-1, 0, 1, 2, -1, -4])
+
+# print(po)
+# from collections import reduce
+# p=reduce(lambda x,y:x+y , range(1,10**8+1))
+# print(p)
+print("1"-"0")

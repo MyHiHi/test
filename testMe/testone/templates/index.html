@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static '/bootstrap.min.css' %}">
+</head>
+<body>
+<center>
+
+        {% with paginator=users.paginator c=9 %}
+    <table class="table table-hover  text-center" style="display: 0 auto;width: 50%;">
+        <tr><th>姓名</th><th class="success">密码</th></tr>
+        {% for i in users %}
+        <script>
+           c=Math.random(0,5) ;
+        </script>
+      <tr><td class="success">{{i.name}}</td>
+        <td>{{i.password | upper}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+
+
+        <ul class="pagination">
+            {% if users.has_previous %}
+            <li ><a href="/?page={{users.previous_page_number}}">&laquo;</a></li>
+            {% else %}
+            <li class="disabled"><a >&laquo;</a></li>
+            {% endif %}
+            {% for num in paginator.page_range %}
+
+                {% if  num == users.number %}
+                <li class="active success"><a href="#">{{num}}</a></li>
+                {% else %}
+                <li ><a href="?page={{num}}">{{num}}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if users.has_next%}
+                <li><a href="/?page={{users.next_page_number}}">&raquo;</a></li>
+            {% else %}
+            <li class="disabled"><a >&raquo;</a></li>
+            {% endif %}
+            </ul>
+{%endwith%}
+    </div>
+</center>
+</html>
