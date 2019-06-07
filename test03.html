@@ -1,45 +1,36 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="resources/img/logo-color.png" type="image/x-icon">
-    <title>测试</title>
-    <style>
-    .tooltip {
-       position: relative;
-       color: #666;
-       font-size: 14px;
-       padding: 6px 12px;
-       display: inline-block;
-       text-align: center;
-       border-radius: 5px;
-       vertical-align: top;
-       background-color: #6c6;
- }
-.tooltip:after {
-       content: "";
-        position: absolute;
-        left: -7px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0px;
-        height: 0px;
-        border-top: 7px solid transparent;
-        border-right: 7px solid;
-        border-bottom: 7px solid transparent;
-        border-right-color: #000;
-}
 
+    <head>
+    <script src='./jquery-1.11.3.min.js'></script>
+    </head>
+    <body>
+        <p>TEST</p>
+        <script>
+    // $('p').click(function (){
+    //     p1=document.getElementsByTagName('p');
+    //     console.log('p1: ',$(p1).html());
+    //     console.log('this: ',$(this).html('popopop'))
+    // })
+            // function Person(name,age){
+            //     const  p={}
+            //     p.name=name;
+            //     p.age=age;
+            //     return p;
+            // }
+            // p= Person('李娜',12)
+            // console.log(p)
 
-    </style>
-  </head>
-  <body>
-
-      rrr
-      <div class="tooltip">这是一个提示框
-          <br>
-          asdsadasascsd
-      </div>
-    
-  </body>
-</html>
+            $.ajax({
+                type: "post",
+                url: "http://localhost/api-token-auth/",
+                data: {username:'admin',password:'909535692a'},
+                dataType: "json",
+                success: function (response) {
+                    console.log('PO: ',response)
+                }
+            });
+            
+                        </script>
+    </body>
+    </html>

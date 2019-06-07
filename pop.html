@@ -1,19 +1,30 @@
-<div class="modal" id="modal">
-    <h1>modal</h1>
-    <a href="#">close</a>
-</div>
 
-<style>
-    .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-}
-.modal:target {
-    display: block;
-}
-</style>
+<html lang="ch-zn">
+    <meta charset="utf-8">
+    <script src='./jquery-1.11.3.min.js'></script>
+    <body>
+        TERST
+        <script>
+            new Promise((res,rej)=>{
+                $.ajax({
+                type: "get",
+                beforeSend:function(request){
+                    // request.setRequestHeader('Access-Control-Allow-Origin',"*")
+                },
+                
+                url: "http://localhost/goods/goods/",
+
+                // dataType: "json",
+                success: function (response) {
+                   res(response.results)
+                },
+                error:function(response){
+                    rej(response)
+                }
+            });
+
+            }).then((data)=>{return data}).then(results=>console.log('数据：',results)).catch(data=>console.log('错误: ',data))
+           
+        </script>
+    </body>
+</html>

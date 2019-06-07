@@ -1,0 +1,24 @@
+<html lang="ch-zn">
+    <meta charset="utf-8">
+    <script src='./jquery-1.11.3.min.js'></script>
+<script>
+    get=function(){
+        var dow=parseInt($('#do').val()),up=parseInt($('#up').val());
+        var p=dow+'^'+up+'= ';
+        var res=1;
+        while (up){
+            if (up%2==1) res*=dow;
+            up>>=1;
+            if (up>0) dow*=dow;
+        }
+        console.log(p+res);
+        
+    }
+</script>
+    <input id='do' style='width:120px;' placeholder="输入基数"><br>
+    <input id='up' style='width:120px;' placeholder="输入幂"><br>
+
+    <button onclick="get()">
+快速幂计算
+    </button>
+</html>

@@ -49,12 +49,28 @@ class Animal(object):
     def __del__(self):
         print("%s killed"%self.name)
 
-cat1=Animal("小米")
-cat2=cat1
-cat3=cat2
-del(cat1)
-print("cat1")
-del(cat2)
-print("cat1")
-del(cat3)
+# cat1=Animal("小米")
+# cat2=cat1
+# cat3=cat2
+# del(cat1)
+# print("cat1")
+# del(cat2)
+# print("cat1")
+# del(cat3)
         
+# from test12 import getAutoReceive
+# start='寂寞的深夜';
+# t=2;
+# names=['小美','凯军']
+
+# print(names[t%2]+': ',start);
+# import time
+
+# while t<10:
+#     t+=1;
+#     time.sleep(5*1)
+#     start=getAutoReceive(start)
+#     print(names[t%2]+': ',start);
+
+import os,sys
+print(sys.path[0])
