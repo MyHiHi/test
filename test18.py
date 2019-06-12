@@ -12,6 +12,7 @@
 
 import os
 
+import numpy 
 import numpy as np
 
 languages = ['Python', 'R', ['Matlab', 'C++']]
@@ -144,9 +145,25 @@ x = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
 y = np.array([[3, 2, 1], [1, 1, 1]])
 # pr(x.shape,y.shape)
 
-x = np.ones(shape=(2, 3, 4))
-y = np.array([1, 2, 3, 4])
-z = np.dot(x, y)
-pr(x, y, z, z.shape)
-print(z.shape)
-print(z)
+# x = np.ones(shape=(2, 3, 4))
+# y = np.array([1, 2, 3, 4])
+# z = np.dot(x, y)
+# pr(x, y, z, z.shape)
+
+
+x=np.random.randint(0,20,size=(2,3,4))
+# y=np.random.randint(1,10,size=(4,2))
+# z=np.dot(x,y)
+# pr(x,y,z,z.shape)
+
+# pr(x,x.sum(),x.sum(axis=0),x.sum(axis=1))
+
+# pr(x,np.sum(x),np.sum(x,axis=1))
+
+
+# np.sum()
+
+# pr(x,x.sum(axis=1,keepdims=True),)
+
+arr = np.random.randint(1,10,size=(3,2,2,2))
+# pr(arr)
